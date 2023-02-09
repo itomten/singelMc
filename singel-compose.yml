@@ -4,11 +4,11 @@ services:
   mc:
     image: ${IMAGE:-itzg/minecraft-server}
     environment:
-    EULA: "true"
-    MAX_MEMORY: 2G
-    VIEW_DISTANCE: 15
-    MAX_PLAYERS: 4
-    ports:
+      EULA: "true"
+      MAX_MEMORY: 2G
+      VIEW_DISTANCE: 15
+      MAX_PLAYERS: 4
+      ports:
       - "25565:25565"
     volumes:
       - /mnt/nasworld/singelMc1:/data
