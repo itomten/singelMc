@@ -1,18 +1,19 @@
 version: "3.8"
-
 services:
   mc:
     image: ${IMAGE:-itzg/minecraft-server}
-    container_name: ${SERVER_NAME}
+    container_name: ${NAME:-delMe}
     environment:
       EULA: "true"
-      MAX_MEMORY: 2G
-      VIEW_DISTANCE: 15
-      MAX_PLAYERS: 4
+      MAX_MEMORY: ${MEM:-2G}
+      VIEW_DISTANCE: ${VIEW:-15}
+      MAX_PLAYERS: ${PLAYERS:-3}
+      VERSION: ${VERSION:-LATEST}
+      TYPE: ${TYPE:-VANILLA}
     ports:
       - "25565:25565"
     volumes:
-      - /mnt/nasworld/${FOLDER}:/data
+      - /mnt/nasworld/${RACK:-dev}/${NAME:-delMe}:/data
     stdin_open: true
     tty: true
     restart: unless-stopped
