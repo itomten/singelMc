@@ -3,6 +3,7 @@ version: "3.8"
 services:
   mc:
     image: ${IMAGE:-itzg/minecraft-server}
+    container_name: ${SERVER_NAME}
     environment:
       EULA: "true"
       MAX_MEMORY: 2G
