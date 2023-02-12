@@ -4,12 +4,15 @@ services:
     image: ${IMAGE:-itzg/minecraft-server}
     container_name: ${NAME:-delMe}
     environment:
+      MOTD: ${MOTD:-"Welcome to delme"}
       EULA: "true"
+      OPS: ${OPS:-itomten}
       MAX_MEMORY: ${MEM:-2G}
       VIEW_DISTANCE: ${VIEW:-15}
       MAX_PLAYERS: ${PLAYERS:-3}
       VERSION: ${VERSION:-LATEST}
       TYPE: ${TYPE:-VANILLA}
+      RCON_PASSWORD: ${RCON_PASSWORD:-minecraft}
     ports:
       - "${PORT:-25565}:25565"
       - "${RCON:-25575}:25575"
