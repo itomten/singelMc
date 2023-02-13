@@ -12,6 +12,7 @@ services:
       MAX_PLAYERS: ${PLAYERS:-3}
       VERSION: ${VERSION:-LATEST}
       TYPE: ${TYPE:-VANILLA}
+      MODE: ${GAMDEMODE:-SURVIVAL}
       RCON_PASSWORD: ${RCON_PASSWORD:-minecraft}
     ports:
       - "${PORT:-25565}:25565"
