@@ -4,12 +4,13 @@ services:
     image: ${IMAGE:-itzg/minecraft-server}
     container_name: ${NAME:-delMe}
     environment:
-      MOTD: ${MOTD:-"Welcome to delme"}
       EULA: "true"
-      OPS: ${OPS:-itomten}
+      MOTD: ${MOTD:-"Welcome to delme"}
       MAX_MEMORY: ${MEM:-2G}
       VIEW_DISTANCE: ${VIEW:-15}
       MAX_PLAYERS: ${PLAYERS:-3}
+      PVP: ${PVP:-true}
+      OPS: ${OPS:-itomten}
       VERSION: ${VERSION:-LATEST}
       TYPE: ${TYPE:-VANILLA}
       MODE: ${GAMDEMODE:-SURVIVAL}
