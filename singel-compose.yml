@@ -6,7 +6,7 @@ services:
     environment:
       EULA: "true"
       MOTD: ${MOTD:-"Welcome to delme"}
-      MAX_MEMORY: ${MEM:-2G}
+      MAX_MEMORY: ${MEM}
       VIEW_DISTANCE: ${VIEW:-15}
       MAX_PLAYERS: ${PLAYERS:-3}
       PVP: ${PVP:-true}
