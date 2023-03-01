@@ -20,6 +20,7 @@ services:
       - "${RCON:-25575}:25575"
     volumes:
       - /mnt/nasworld/${RACK:-dev}/${NAME:-delMe}:/data
+      - /mnt/nasworld/${RACK:-dev}/${NAME:-delMe}/world:/worlds/world
     stdin_open: true
     tty: true
     restart: unless-stopped
